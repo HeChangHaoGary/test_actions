@@ -16,14 +16,14 @@ jobs:
     # You can convert this to a matrix build if you need cross-platform coverage.
     # See: https://docs.github.com/en/free-pro-team@latest/actions/learn-github-actions/managing-complex-workflows#using-a-build-matrix
     runs-on: ubuntu-latest
-    # get docker contatiner
-    # container: 
-    #   image: garyhhh/dingo-centos:latest
-    #   # mount 
-    #   volumes:
-    #   - my_docker_volume:/volume_mount
-    #   - /data/my_data
-    #   - /source/directory:/destination/directory
+    get docker contatiner
+    container: 
+      image: garyhhh/dingo-centos:latest
+      # mount
+      workingdirectory: "/home/runner/work/test_actions"
+
+      volumes:
+      -  /home/runner/work/test_actions:/home/runner/work/test_actions
 
     steps:
     - uses: actions/checkout@v3

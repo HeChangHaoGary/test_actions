@@ -17,13 +17,13 @@ jobs:
     # See: https://docs.github.com/en/free-pro-team@latest/actions/learn-github-actions/managing-complex-workflows#using-a-build-matrix
     runs-on: ubuntu-latest
     # get docker contatiner
-    container: 
-      image: garyhhh/dingo-centos:latest
-      # mount 
-      volumes:
-      - my_docker_volume:/volume_mount
-      - /data/my_data
-      - /source/directory:/destination/directory
+    # container: 
+    #   image: garyhhh/dingo-centos:latest
+    #   # mount 
+    #   volumes:
+    #   - my_docker_volume:/volume_mount
+    #   - /data/my_data
+    #   - /source/directory:/destination/directory
 
     steps:
     - uses: actions/checkout@v3

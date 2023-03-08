@@ -20,10 +20,10 @@ jobs:
     container: 
       image: garyhhh/dingo-centos:latest
       # mount 
-      # volumes:
-      # - my_docker_volume:/volume_mount
-      # - /data/my_data
-      # - /source/directory:/destination/directory
+      volumes:
+      - my_docker_volume:/volume_mount
+      - /data/my_data
+      - /source/directory:/destination/directory
 
     steps:
     - uses: actions/checkout@v3

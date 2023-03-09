@@ -32,7 +32,7 @@ jobs:
     - name: test path
       # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
       # See https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html?highlight=cmake_build_type
-      run: ls -l && pwd && cd /home/runner/work/test_actions/test_actions && ls -l && echo ${{env.GITHUB_ACTION_REPOSITORY}}
+      run: ls -l && pwd && cd /home/runner/work/test_actions/test_actions && ls -l && echo ${{GITHUB_ACTION_REPOSITORY}}
 
 
     # - name: Configure CMake

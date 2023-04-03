@@ -40,5 +40,18 @@ jobs:
     - name: Build
       # Build your program with the given configuration
       run: cd /home/dingo-store && cmake --build ./build --config ${{env.BUILD_TYPE}}
+
+
+    - name: Archive the dingo directory
+      run: |
+        cd /home/dingo-store && tar -czvf dingo-store.tar.gz  scripts build/bin/dingodb* conf/ 
+
+    - name: copy artifactory to another workflow
+      uses: actions/upload-artifact@v2
+      with:
+          name: dingo-store.tar.gz
+          path: ./dingo-store.tar.gz
+
+    
     
 
